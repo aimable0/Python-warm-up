@@ -1,10 +1,14 @@
-greeting = input('Greeting: ').strip().casefold()
+import random
+import sys
 
-if greeting.startswith('hello'):
-    print('$0')
-elif greeting.startswith('h'):
-    print('$20')
-else:
-    print('$100')
 
-    
+# check for errorsN
+if len(sys.argv) < 2:
+  sys.exit('few arguments passed')
+
+# the main code to run
+for arg in sys.argv[1:]:
+  print('Hello', arg)
+
+number = 10
+print(f"{number:03}")

@@ -1,4 +1,7 @@
-media_types = {
+def print_extension(name):
+  # create a dictionary to be used while checking for extension
+
+  media_types = {
         ".gif": "image/gif",
         ".jpg": "image/jpeg",
         ".jpeg": "image/jpeg",
@@ -7,14 +10,17 @@ media_types = {
         ".txt": "text/plain",
         ".zip": "application/zip"
     }
-
-text = input('File name: ')
-
-def print_extension(text):
+  
+  # loop through the dictianary's key and value at the same time
   for extension, mimetype in media_types.items():
-    if text.endswith(extension):
+    if name.endswith(extension):
       print(mimetype)
       return
+  # if the extension was not found in the list or is not on the name we print no "extension"
   print('No extension')
 
-print_extension(text)
+def main():
+  text = input('File name: ')
+  print_extension(text)
+
+main()
